@@ -39,23 +39,7 @@ body, html {
 
 @media (max-width: 600px) {
   .app-container {
-    padding: 32px 6vw 48px 6vw; /* More top, horizontal, and bottom padding on mobile */
-  }
-  label input[type="checkbox"] {
-    accent-color: #fff; /* white checkmark for mobile */
-    background: #111;   /* black background */
-    border: 2px solid #fff;
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    min-height: 32px;
-    margin-right: 14px;
-    border-radius: 7px;
-    box-shadow: 0 1px 4px #0004;
-  }
-  label {
-    font-size: 1.15rem;
-    padding: 10px 0;
+    padding: 32px 6vw 48px 6vw;
   }
 }
 
@@ -97,12 +81,32 @@ body, html {
   height: 70px !important;
 }
 
-  label {
-    font-size: 1.15rem;
-    padding: 10px 0;
-  }
+/* Checkbox group for vertical alignment */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
 
-  label input[type="checkbox"] {
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 1.15rem;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .checkbox-group label {
+    font-size: 1.15rem;
+    padding: 0;
+  }
+  .checkbox-group input[type="checkbox"] {
     accent-color: #000;      /* Black checkmark */
     background: #fff;        /* White background */
     border: 2px solid #222;
@@ -113,8 +117,21 @@ body, html {
     margin-right: 14px;
     border-radius: 7px;
     box-shadow: 0 1px 4px #0004;
-    appearance: auto;        /* Ensure native rendering */
+    appearance: auto;
   }
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #fff;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
 
 input[type="range"] {
   width: 100%;

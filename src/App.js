@@ -4,7 +4,6 @@ import SplitText from "./SplitText";
 import Dither from './Dither';
 import CircularText from './CircularText';
 
-
 function App() {
   const [length, setLength] = useState(12);
   const [includeUppercase, setIncludeUppercase] = useState(true);
@@ -79,9 +78,9 @@ function App() {
         <div
           style={{
             position: "relative",
-            width: 180, // increased from 120
-            height: 180, // increased from 120
-            margin: "48px auto 20px auto", // more space above
+            width: 180,
+            height: 180,
+            margin: "48px auto 20px auto",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -91,8 +90,8 @@ function App() {
             src="https://raw.githubusercontent.com/ckfnr/gallery/refs/heads/main/cksite_logo_transparent.png"
             alt="Logo"
             style={{
-              width: 110, // increased from 64
-              height: 110, // increased from 64
+              width: 110,
+              height: 110,
               objectFit: "contain",
               position: "absolute",
               top: "50%",
@@ -110,8 +109,8 @@ function App() {
               position: "absolute",
               top: 0,
               left: 0,
-              width: 180, // match container
-              height: 180, // match container
+              width: 180,
+              height: 180,
               zIndex: 1,
               pointerEvents: "none",
             }}
@@ -130,7 +129,7 @@ function App() {
           />
         </label>
 
-        <div>
+        <div className="checkbox-group">
           <label>
             <input
               type="checkbox"
