@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,20 +10,36 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 /* Container */
 .app-container {
   max-width: 420px;
-  margin: 3rem auto;
-  padding: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 95vw;
+  margin: 2.5rem auto;
+  padding: 1.2rem 1rem 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: rgba(20, 20, 20, 0.92);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   color: #fff;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 98vw;
+    margin: 1rem auto;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 0.8rem;
+  }
+  .strength-label,
+  .feedback-warning,
+  .feedback-suggestions {
+    font-size: 1rem;
+  }
 }
 
 /* Heading */
@@ -46,8 +62,8 @@ label {
 
 label input[type="checkbox"] {
   margin-right: 10px;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   accent-color: #fff;
   background: #222;
@@ -55,7 +71,7 @@ label input[type="checkbox"] {
 }
 
 /* Slider */
-input[type=range] {
+input[type="range"] {
   width: 100%;
   margin: 8px 0 16px 0;
   -webkit-appearance: none;
@@ -65,28 +81,28 @@ input[type=range] {
   cursor: pointer;
   transition: background 0.3s;
 }
-input[type=range]:hover {
+input[type="range"]:hover {
   background: #444;
 }
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   background: #fff;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 6px #0008;
   border: 2px solid #bbb;
   transition: background 0.3s ease;
-  margin-top: -8px;
+  margin-top: -11px;
 }
-input[type=range]::-webkit-slider-thumb:hover {
+input[type="range"]:hover::-webkit-slider-thumb {
   background: #bbb;
 }
-input[type=range]::-moz-range-thumb {
-  width: 22px;
-  height: 22px;
+input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
   background: #fff;
   border-radius: 50%;
   cursor: pointer;
@@ -96,10 +112,10 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* Password input */
-input[type=text] {
+input[type="text"] {
   width: 100%;
-  padding: 12px 15px;
-  font-size: 1.2rem;
+  padding: 14px 15px;
+  font-size: 1.1rem;
   border: 2px solid #333;
   border-radius: 8px;
   margin-top: 1rem;
@@ -108,7 +124,7 @@ input[type=text] {
   transition: border-color 0.3s ease, background 0.3s;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   outline: none;
   border-color: #fff;
   background: #222;
@@ -144,7 +160,7 @@ input[type=text]:focus {
 
 .feedback-suggestions {
   margin-top: 6px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #bbb;
   list-style-type: disc;
   padding-left: 20px;
@@ -158,11 +174,11 @@ input[type=text]:focus {
   border: none;
   color: #111;
   font-size: 1.1rem;
-  padding: 12px 0;
+  padding: 16px 0;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 8px #0008;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
   user-select: none;
 }
 
@@ -175,5 +191,27 @@ input[type=text]:focus {
 .copy-button:active {
   background-color: #222;
   color: #fff;
-  box-shadow: 0 2px
+  box-shadow: 0 2px 6px #000c;
+}
+
+/* Responsive logo/circular text container */
+.logo-circular-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 48px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .logo-circular-container {
+    width: 120px;
+    height: 120px;
+    margin: 24px auto 12px auto;
+  }
+  .logo-circular-container img {
+    width: 70px !important;
+    height: 70px;
+  }
 }
