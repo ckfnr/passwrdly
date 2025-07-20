@@ -81,7 +81,10 @@ body, html {
   height: 70px !important;
 }
 
+<<<<<<< HEAD
+=======
 /* Checkbox group for vertical alignment */
+>>>>>>> 5eb90b3c8f4063d31a3d98a56127be7febad9422
 .checkbox-group {
   display: flex;
   flex-direction: column;
@@ -107,6 +110,9 @@ body, html {
     padding: 0;
   }
   .checkbox-group input[type="checkbox"] {
+<<<<<<< HEAD
+    accent-color: #000;
+=======
     accent-color: #000;      /* Black checkmark */
     background: #fff;        /* White background */
     border: 2px solid #222;
@@ -123,6 +129,7 @@ body, html {
 
   .checkbox-group input[type="checkbox"] {
     accent-color: #000;      /* Black checkmark and box */
+>>>>>>> 5eb90b3c8f4063d31a3d98a56127be7febad9422
     border: 2px solid #222;
     width: 32px;
     height: 32px;
@@ -132,6 +139,22 @@ body, html {
     border-radius: 7px;
     box-shadow: 0 1px 4px #0004;
   }
+<<<<<<< HEAD
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #fff;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+=======
+>>>>>>> 5eb90b3c8f4063d31a3d98a56127be7febad9422
 
 input[type="range"] {
   width: 100%;
@@ -175,7 +198,6 @@ input[type="range"]::-moz-range-thumb {
   transition: background 0.3s ease;
 }
 
-/* Password input */
 input[type="text"] {
   width: 100%;
   max-width: 400px;
